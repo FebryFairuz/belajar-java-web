@@ -1,0 +1,94 @@
+1. Selamat Malam. Buat Project Java Web Terlebih dahulu.
+   jika PCnya masih perawan maka mesti terhubung dengan Internet.
+2. Masuk ke dalam project dan masuk ke folder main. sekarang kita buat 
+   source package sesuai dengan nama package yang telah dibuat.
+3. Testing menjalankan project.
+   Jangan Lupa untuk masuk kedalam projectnya yak..
+   Yeeeyyyy it's work...
+4. Sekarang buat Controllernya. Bagian ini mesti sabar dan teliti
+   yak guys. Karena saya cuman copy n paste. dan kamu mesti ngetik.
+   Buka NetBeansnya dan open project.
+...
+
+	1. tambahkan dependensi pada Pom.
+	2. tambahkan pada file web.xml
+	   nama servlet bebas. url pattern juga bebas.
+	3. membuat file servlet.
+	4. Membuat file jsp dan file JAVA
+	   biar rapih saja pastikan setiap konten proses web anda di buat package.
+	5. Untuk proses identifikasi (Proses Login).
+	   Setiap Konten akan memiliki 3 buah file, yaitu :
+	   1. Model
+	   2. Controller
+	   3. Database Application Object
+	6. Selesai membuat kontroller
+	7. Sekarang kita akan membuat desainnya.
+	   Jadi dah file loginnya.
+	untuk saat ini selesai. sampai ketemu di tutorial berikutnya.
+
+	CAO..
+
+...
+	
+Hall00..
+Ketemu lagi. Kali ini belajar memasang Site-mesh.
+
+Note : Untuk yang PCnya masih perawan dengan JAVA WEB. 
+pada saat menambahkan POM saya lupa memberi tahu bahwa dependensinya
+mesti di downloat. jika ada tanda seru [!] maka itu berarti mesti didownload
+
+...
+
+5. membuat sitemesh.
+	1. menambahkan kode sitemesh
+	2. menambahkan kembali file web.xml
+	3. membuat file decorators
+	sebentar yah saya perbaiki dulu.
+	i'll be right back.
+	hahahaha..
+	Ternyata file Login hanya dikeluarkan saja.
+	file login pindahkan, yg tadinya ada di folder
+	identifikasi sekarang pindahkan ke WEB PAGES setara 
+	dengan index.jsp
+	4. Tada selesai setting Sitemeshnya....
+	   sekarang ke desain. dari sini akan terlihat
+	   penggunaan sitemesh itu buat apa.
+	   Let's Ngoding..
+	5. nah Layout.jsp sudah dibuat, ntar dulu deh ada yang..
+	sekarang lihat bedanya...
+	itulah gunanya SITEMESH..
+	masih kagak ngerti ?
+	cari digoogle saja sono.
+6. Desainlah web anda dengan Fantastis Bombasti Cetar Membahana Ulalala..
+7. Sekarang Saya akan coba buat fasilitas Link.
+ingat kalo cuman edit file JSP saja tak perlu mengkompilenya
+seee It's Work Again...
+
+Ok cukup sampai disini untuk kali ini.
+Sampai jumpa di tutorial berikutnya..
+
+Bye...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
