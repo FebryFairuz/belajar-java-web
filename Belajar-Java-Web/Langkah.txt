@@ -69,6 +69,91 @@ Sampai jumpa di tutorial berikutnya..
 
 Bye...
 
+Hallo lagi..
+kali ini akan belajar tentang database.
+untuk bagian ini agak cukup ruwet, jadi bersabar. 
+kalo terjadi error coba cari diinternet. karena disana
+solusinya banyak banget.
+
+kali ini saya tidak akan mengkoding seperti biasanya.
+tapi saya akan tunjukan kamu harus berbuat apa.
+bagaimanapun juga porsi saya disini hanya membantu.
+jadi porsi untuk membantu sekitar 40%. sisanya tanggung jawab kalian..!!
+Semangat.
+Let's Do It.
+
+ditutor sebelumnya sudah sampai sini :
+	- sitemesh
+	- controller
+	- dan pindah link, bukan.
+kali ini akan membuat fungsi CRUD (Create Read Update dan Delete)
+Langkah :
+
+1. Buatlah database sesuai dengan kebutuhan kalian.
+   disini saya punya Database nama'a tokobagus
+   dengan tabel produk dan fieldnya :
+   id,kode,nama,harga dan terakhir_update.
+   silakan buat databasenya.
+2. Membuat File koneksi.
+   silkan membuat file koneksi.
+3. Membuat file jsp untuk produk.
+   file yang saya buat ada dua buah yaitu : daftar-produk dan input-produk
+4. Setelah menambahkan file jsp, langsung buat package untuk produk. isinya seperti biasa
+   ada Model,Controller dan Dao.
+5. Setelah menambahkan file javanya sekarang ke file Modelnya.
+   Ketiklah koding tersebut. *JANGAN SAMPAI SALAH, YANG TELITI.  
+   coba ketik para variabel yang telah disediakan.
+   untuk membuat Setter dan Getter silakan pencet keyboard anda Alt+insert.
+6. Setelah membuat file Model sekarang ke file Dao.
+   tambahkan kodingan tersebut.   *JANGAN SAMPAI SALAH, YANG TELITI.
+7. Setelah itu buat file Controllernya
+   *JANGAN SAMPAI SALAH, YANG TELITI.
+8. CRUD telah dibuat sekarang ke file Koneksi anda dan tambahkan nama package "produk" anda.
+   Silakan anda masukan file2 jika file tersebut diharuskan terhubung ke database.
+9. Langkah yang terakhir adalah membuat desain daftar dan input produk javanya.
+   Sebelum itu silakan jalankan terlebih dahulu projectnya, untuk memastikan file terkoneksi
+   ke database dengan baik. jika terjadi kesalahan dalam mengakses maka anda harus mengecek
+   apakah file Model, Controller dan Dao anda sudah benar atau tidak. dan juga cek file Koneksinya
+   juga. Jika hasilnya seperti itu maka project anda baik-baik saja.
+   Sebelum mendisain coba anda buat 2 buah link (tutor sebelumnya), yaitu :
+   - Lihat Produk
+   - Input Produk
+   *jika ada yang lupa atau tidak tahu buat link silakan buka kembali video tutor part 2.
+   
+   Ok saatnya anda mendesain.
+   Untuk membuat sebuah form input sebaiknya jangan menggunakan :
+		<form action="namafile" method="post">
+			<input type="text" name="nama">
+		</form>
+	tapi gunakanlah SPRING, karena kita membuat JAVA WEB bukan PHP WEB.
+		<spring:form modelAttribute="produk">
+			<spring:input path="nama"/>
+		</spring:form>
+	
+	Let's Do It.
+	
+	1. tambahkan ini : <%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
+	2. Desain sesuai kebutuhan anda.
+	3. setelah mendesain form input mari kita jalankan dan lihat hasilnya. *jangan lupa disimpan
+	4. Desain tampil produk.
+		tambahkan <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> ini untuk menampilkan
+		record dari database. dengan menguunakan code yang dibutuhkan.
+	5. Sekarang coba jalankan.
+	6. Selesai.
+	
+	Untuk materi hari ini selesai.
+	saya akan menjelaskan kodingannya jika anda sudah benar2 berhasil membuat ini.
+	atau bisa buka buku/catatan kuliah yang telah anda catat/pahami selama ini :)
+	ingat jika terjadi error cobalah cari di internet 
+	cobalah belajar mandiri terlebih dahulu.
+	Sekian dan terima kasih.
+	
+	Source Code tersedia di Github saya.
+	Silakan lihat dari situ.
+	yang teliti dan penuh sabar mengerjakannya ya..
+	Semangat 45.
+  
+   
 
 
 

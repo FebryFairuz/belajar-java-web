@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<decorators defaultdir="/WEB-INF/decorators">    
+ 
+  <!-- Ini digunakan untuk memilih file mana yang tidak akan digunakan sitemesh
+       biasanya file ini berdiri sendiri -->
+  <excludes>    
+    <pattern>/login.*</pattern>
+  </excludes>
+  <!--sampai sini-->
+  
+  <decorator name="template-dasar" page="layout.jsp">
+    <pattern>/*</pattern>
+  </decorator>
+  
+</decorators>
