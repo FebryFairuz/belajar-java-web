@@ -9,10 +9,11 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 public class Produk {
     private Integer id;
+    private Integer idkategori;
     
     @NotNull
     @NotEmpty
-    @Size(min= 1, max = 5)    
+    @Size(min= 1, max = 8)    
     private String kode;
     
     @NotNull @NotEmpty
@@ -30,6 +31,14 @@ public class Produk {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+    
+    public Integer getIdkategori() {
+        return idkategori;
+    }
+
+    public void setIdkategori(Integer idkategori) {
+        this.idkategori = idkategori;
     }
 
     public String getKode() {

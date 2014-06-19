@@ -178,11 +178,12 @@ public final class daftar_002dproduk_jsp extends org.apache.jasper.runtime.HttpJ
     if (_jspx_eval_c_005fotherwise_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("                <table border=\"1\">\n");
+        out.write("                <table border=\"1\" width=\"800\">\n");
         out.write("                    <thead>\n");
         out.write("                        <tr>\n");
         out.write("                            <th>No</th>\n");
         out.write("                            <th>Kode</th>\n");
+        out.write("                            <th>Kategori</th>\n");
         out.write("                            <th>Nama</th>\n");
         out.write("                            <th>Harga</th>\n");
         out.write("                            <th>Terakhir Update</th>\n");
@@ -218,11 +219,11 @@ public final class daftar_002dproduk_jsp extends org.apache.jasper.runtime.HttpJ
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fotherwise_005f0);
-    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(37,24) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true expectedTypeName = java.lang.Object deferredMethod = false methodSignature = null
-    _jspx_th_c_005fforEach_005f0.setItems(new org.apache.jasper.el.JspValueExpression("/WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(37,24) '${daftarProduk}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${daftarProduk}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
-    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(37,24) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(38,24) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true expectedTypeName = java.lang.Object deferredMethod = false methodSignature = null
+    _jspx_th_c_005fforEach_005f0.setItems(new org.apache.jasper.el.JspValueExpression("/WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(38,24) '${daftarProduk}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${daftarProduk}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
+    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(38,24) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVar("p");
-    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(37,24) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(38,24) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVarStatus("i");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {
@@ -236,6 +237,9 @@ public final class daftar_002dproduk_jsp extends org.apache.jasper.runtime.HttpJ
           out.write("</td>\n");
           out.write("                            <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${p.kode}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("</td>\n");
+          out.write("                            <td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${p.idkategori}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\n");
           out.write("                            <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${p.nama}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
@@ -254,7 +258,8 @@ public final class daftar_002dproduk_jsp extends org.apache.jasper.runtime.HttpJ
           out.write("\">edit</a> | \n");
           out.write("                                <a href=\"hapus?id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${p.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("\">hapus</a>\n");
+          out.write("\" \n");
+          out.write("                                   onClick=\"return confirm('apakah anda ingin menghapus ?')\">hapus</a>\n");
           out.write("                            </td>\n");
           out.write("                        </tr>\n");
           out.write("                        ");
@@ -285,9 +290,9 @@ public final class daftar_002dproduk_jsp extends org.apache.jasper.runtime.HttpJ
     org.apache.taglibs.standard.tag.rt.fmt.FormatNumberTag _jspx_th_fmt_005fformatNumber_005f0 = (org.apache.taglibs.standard.tag.rt.fmt.FormatNumberTag) _005fjspx_005ftagPool_005ffmt_005fformatNumber_0026_005fvalue_005ftype_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.FormatNumberTag.class);
     _jspx_th_fmt_005fformatNumber_005f0.setPageContext(_jspx_page_context);
     _jspx_th_fmt_005fformatNumber_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(42,32) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(44,32) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_fmt_005fformatNumber_005f0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${p.harga}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(42,32) name = type type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(44,32) name = type type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_fmt_005fformatNumber_005f0.setType("number");
     int _jspx_eval_fmt_005fformatNumber_005f0 = _jspx_th_fmt_005fformatNumber_005f0.doStartTag();
     if (_jspx_th_fmt_005fformatNumber_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -306,9 +311,9 @@ public final class daftar_002dproduk_jsp extends org.apache.jasper.runtime.HttpJ
     org.apache.taglibs.standard.tag.rt.fmt.FormatDateTag _jspx_th_fmt_005fformatDate_005f0 = (org.apache.taglibs.standard.tag.rt.fmt.FormatDateTag) _005fjspx_005ftagPool_005ffmt_005fformatDate_0026_005fvalue_005fpattern_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.FormatDateTag.class);
     _jspx_th_fmt_005fformatDate_005f0.setPageContext(_jspx_page_context);
     _jspx_th_fmt_005fformatDate_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(43,32) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(45,32) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_fmt_005fformatDate_005f0.setValue((java.util.Date) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${p.terakhirUpdate}", java.util.Date.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(43,32) name = pattern type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/templates/jsp/belajar/produk/daftar-produk.jsp(45,32) name = pattern type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_fmt_005fformatDate_005f0.setPattern("EEE, dd MMM yyyy");
     int _jspx_eval_fmt_005fformatDate_005f0 = _jspx_th_fmt_005fformatDate_005f0.doStartTag();
     if (_jspx_th_fmt_005fformatDate_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {

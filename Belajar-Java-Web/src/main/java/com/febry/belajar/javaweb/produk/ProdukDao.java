@@ -16,8 +16,8 @@ public class ProdukDao {
 
     @Autowired private DataSource dataSource;
     
-    private String sqlInsert = "insert into produk (kode, nama, harga, terakhir_update) " + "values (?,?,?,?)";
-    private String sqlUpdate = "update produk set kode=?, nama=?, harga=?, terakhir_update=? " + "where id = ?";
+    private String sqlInsert = "insert into produk (idkategori,kode, nama, harga, terakhir_update) " + "values (?,?,?,?,?)";
+    private String sqlUpdate = "update produk set idkategori=?, kode=?, nama=?, harga=?, terakhir_update=? " + "where id = ?";
     private String sqlCariSemuaProduk = "select * from produk order by kode";
     private String sqlCariById = "select * from produk where id = ?";
     private String sqlHapusById = "delete from produk where id = ?";
@@ -27,19 +27,21 @@ public class ProdukDao {
         
         if (p.getId() == null) {
             PreparedStatement psInsert = c.prepareStatement(sqlInsert);
-            psInsert.setString(1, p.getKode());
-            psInsert.setString(2, p.getNama());
-            psInsert.setBigDecimal(3, p.getHarga());
-            psInsert.setDate(4, new java.sql.Date(p.getTerakhirUpdate().getTime()));
+            psInsert.setInt(1, p.getIdkategori());
+            psInsert.setString(2, p.getKode());
+            psInsert.setString(3, p.getNama());
+            psInsert.setBigDecimal(4, p.getHarga());
+            psInsert.setDate(5, new java.sql.Date(p.getTerakhirUpdate().getTime()));
 
             psInsert.executeUpdate();
         } else {
             PreparedStatement psUpdate = c.prepareStatement(sqlUpdate);
-            psUpdate.setString(1, p.getKode());
-            psUpdate.setString(2, p.getNama());
-            psUpdate.setBigDecimal(3, p.getHarga());
-            psUpdate.setDate(4, new java.sql.Date(p.getTerakhirUpdate().getTime()));
-            psUpdate.setInt(5, p.getId());
+            psUpdate.setInt(1, p.getIdkategori());
+            psUpdate.setString(2, p.getKode());
+            psUpdate.setString(3, p.getNama());
+            psUpdate.setBigDecimal(4, p.getHarga());
+            psUpdate.setDate(5, new java.sql.Date(p.getTerakhirUpdate().getTime()));
+            psUpdate.setInt(6, p.getId());
 
             psUpdate.executeUpdate();
         }
@@ -81,6 +83,7 @@ public class ProdukDao {
     public Produk konversiResultSetKeProduk(ResultSet rs) throws SQLException{
         Produk p = new Produk();
         p.setId(rs.getInt("id"));
+        p.setIdkategori(rs.getInt("idkategori"));
         p.setKode(rs.getString("kode"));
         p.setNama(rs.getString("nama"));
         p.setHarga(rs.getBigDecimal("harga"));
